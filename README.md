@@ -68,34 +68,34 @@
 			   
 ###  List of supported API
 
- *  <a href="#login_api_autoscroll">Login</a>
- *  <a href="#equity_search_api_autoscroll">SearchEquityDerivative</a>
- *  <a href="#quote_api_autoscroll">Quote</a>
- *  <a href="#optionchain_api_autoscroll">OptionChain</a>
- *  <a href="#limit_api_autoscroll">UserLimits</a>
- *  <a href="#placeorder_api_autoscroll">PlaceOrder</a>
- *  <a href="#placeorderBO_api_autoscroll">PlaceOrderBO</a>
- *  <a href="#placeorderCO_api_autoscroll">PlaceOrderCO</a>
- *  <a href="#modify_order_api_autoscroll">ModifyOrder</a>
- *  <a href="#orderbook_api_autoscroll">OrderBook</a>
- *  <a href="#triggerorder_api_autoscroll">TriggerOrders</a>
- *  <a href="#order_status_api_autoscroll">OrderStatus</a>
- *  <a href="#cancel_order_api_autoscroll">CancelOrder</a>
- *  <a href="#cancelorderCO_api_autoscroll">CancelOrderCO</a>
- *  <a href="#cancelorderBO_api_autoscroll">CancelOrderBO</a>
- *  <a href="#tradebook_api_autoscroll">TradeBook</a>
- *  <a href="#positions_api_autoscroll">Positions</a>
- *  <a href="#positionConversion_api_autoscroll">PositionConversion</a>
- *  <a href="#positionSquareOff_api_autoscroll">PositionSquareOff</a>
- *  <a href="#holdings_api_autoscroll">Holdings</a>
- *  <a href="#intraDayCandleData_api_autoscroll">IntraDayCandleData</a>
- *  <a href="#indexIntraDayCandleData_api_autoscroll">IndexIntraDayCandleData</a>
- *  <a href="#historicalCandleData_api_autoscroll">HistoricalCandleData</a>
- *  <a href="#indexHistoricalCandleData_api_autoscroll">IndexHistoricalCandleData</a>
- *  <a href="#logout_api_autoscroll">Logout</a>
+ *  <a href="#login_api">Login</a>
+ *  <a href="#equity_search_api">SearchEquityDerivative</a>
+ *  <a href="#quote_api">Quote</a>
+ *  <a href="#optionchain_api">OptionChain</a>
+ *  <a href="#limit_api">UserLimits</a>
+ *  <a href="#placeorder_api">PlaceOrder</a>
+ *  <a href="#placeorderBO_api">PlaceOrderBO</a>
+ *  <a href="#placeorderCO_api">PlaceOrderCO</a>
+ *  <a href="#modify_order_api">ModifyOrder</a>
+ *  <a href="#orderbook_api">OrderBook</a>
+ *  <a href="#triggerorder_api">TriggerOrders</a>
+ *  <a href="#order_status_api">OrderStatus</a>
+ *  <a href="#cancel_order_api">CancelOrder</a>
+ *  <a href="#cancelorderCO_api">CancelOrderCO</a>
+ *  <a href="#cancelorderBO_api">CancelOrderBO</a>
+ *  <a href="#tradebook_api">TradeBook</a>
+ *  <a href="#positions_api">Positions</a>
+ *  <a href="#positionConversion_api">PositionConversion</a>
+ *  <a href="#positionSquareOff_api">PositionSquareOff</a>
+ *  <a href="#holdings_api">Holdings</a>
+ *  <a href="#intraDayCandleData_api">IntraDayCandleData</a>
+ *  <a href="#indexIntraDayCandleData_api">IndexIntraDayCandleData</a>
+ *  <a href="#historicalCandleData_api">HistoricalCandleData</a>
+ *  <a href="#indexHistoricalCandleData_api">IndexHistoricalCandleData</a>
+ *  <a href="#logout_api">Logout</a>
 
 
-### <h3 id="login_api_autoscroll">Login Api:</h3>
+### <h3 id="login_api">Login Api:</h3>
 
    Java Bridge allows user authentication using UserLoginApi. A valid StockNote Trading Account and subscription to StockNote API Services is a pre-requisite for successful authentication.
 
@@ -140,7 +140,7 @@
     
 #### Using the session token we can call other API’s through java SDK
 
-### <h3 id="equity_search_api_autoscroll">Search Equity & Derivative:</h3>
+### <h3 id="equity_search_api">Search Equity & Derivative:</h3>
 
    This API is used to search equity, derivatives and commodity scrips based on user provided search symbol and exchange name.
 
@@ -182,7 +182,7 @@
      } ]
     }
 
-###  <h3 id="quote_api_autoscroll">Quote:</h3>
+###  <h3 id="quote_api">Quote:</h3>
 
    Get market depth details for a specific equity scrip including but not limited to values like last trade price, previous close price, change value, change percentage, bids/asks, upper and lower circuit limits etc. This helps user with market picture of an equity scrip using which he will be able to place an order.
 
@@ -255,7 +255,7 @@
       "listingId": "3045_NSE"
       }
 
-### <h3 id="optionchain_api_autoscroll">OptionChain:</h3>
+### <h3 id="optionchain_api">OptionChain:</h3>
 
     To search OptionChain for equity, derivatives and commodity scrips based on user provided search symbol and exchange name. 
       
@@ -292,7 +292,7 @@
       } ]
     }
 
-###  <h3 id="limit_api_autoscroll">UserLimits:</h3>
+###  <h3 id="limit_api">UserLimits:</h3>
 
    Gets the user cash balances, available margin for trading in equity and commodity segments.
       
@@ -326,7 +326,7 @@
       }
     }
 
-### <h3 id="placeorder_api_autoscroll">PlaceOrder:</h3>
+### <h3 id="placeorder_api">PlaceOrder:</h3>
 
    To place an equity/derivative order to the exchange i.e the place order request typically registers the order with OMS and when it happens successfully, a success response is returned. Successful placement of an order via the API does not imply its successful execution. To be precise, under normal scenarios, the whole flow of order execution starting with order placement, routing to OMS and transfer to the exchange, order execution, and confirmation from exchange happen real time. But due to various reasons like market hours, exchange related checks etc. This may not happen instantly. So when an order is successfully placed the PlaceOrder API returns an OrderNumber in response, and in scenarios as above the actual order status can be checked separately using the OrderStatus API call .This is for Placing CNC, MIS and NRML Orders.
     
@@ -380,7 +380,7 @@
       }
     }
 
-### <h3 id="placeorderBO_api_autoscroll">PlaceOrderBO:</h3>
+### <h3 id="placeorderBO_api">PlaceOrderBO:</h3>
 
    To place an equity/derivative order to the exchange i.e the place order BO request typically registers the order with OMS and when it happens successfully, a success response is returned. Successful placement of an order via the API does not imply its successful execution. To be precise, under normal scenarios, the whole flow of order execution starting with order placement, routing to OMS and transfer to the exchange, order execution, and confirmation from exchange happen real time. But due to various reasons like market hours, exchange related checks etc. This may not happen instantly. So when an order is successfully placed the placeOrderBO returns an orderNumber in response, and in scenarios as above the actual order status can be checked separately using the orderStatus API call. This is for Placing BO Orders.
         
@@ -438,7 +438,7 @@
       }
     }
 
-### <h3 id="placeorderCO_api_autoscroll">PlaceOrderCO:</h3>
+### <h3 id="placeorderCO_api">PlaceOrderCO:</h3>
 
    To place an equity/derivative order to the exchange i.e the place order CO request typically registers the order with OMS and when it happens successfully, a success response is returned. Successful placement of an order via the API does not imply its successful execution. To be precise, under normal scenarios, the whole flow of order execution starting with order placement, routing to OMS and transfer to the exchange, order execution, and confirmation from exchange happen real time. But due to various reasons like market hours, exchange related checks etc. This may not happen instantly. So when an order is successfully placed the placeOrderCO returns an orderNumber in response, and in scenarios as above the actual order status can be checked separately using the orderStatus API call. This is for Placing CO Orders.
         
@@ -491,7 +491,7 @@
       }
     }
 
-###  <h3 id="modify_order_api_autoscroll">Modify Order:</h3>
+###  <h3 id="modify_order_api">Modify Order:</h3>
 
    User would be able to modify some attributes of an order as long as it is with open/pending status in system. For modification order identifier is mandatory. With order identifier you need to send the optional parameter(s) which needs to be modified. In case the optional parameters aren't sent, the default will be considered from the original order. Modifiable attributes include quantity, Order Type (L,MKT, SL,SL-M). This API cannot be used for modifying attributes of an executed/rejected/cancelled order. Only the attribute that needs to be modified should be sent in the request alongwith the Order Identifier.
 
