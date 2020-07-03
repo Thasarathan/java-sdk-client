@@ -68,34 +68,34 @@
 			   
 ###  List of supported API
 
- *  <a href="#login_api">Login</a>
- *  <a href="#equity_search_api">SearchEquityDerivative</a>
- *  <a href="#quote_api">Quote</a>
- *  <a href="#optionchain_api">OptionChain</a>
- *  <a href="#limit_api">UserLimits</a>
- *  <a href="#placeorder_api">PlaceOrder</a>
- *  <a href="#placeorderBO_api">PlaceOrderBO</a>
- *  <a href="#placeorderCO_api">PlaceOrderCO</a>
- *  <a href="#modify_order_api">ModifyOrder</a>
- *  <a href="#orderbook_api">OrderBook</a>
- *  <a href="#triggerorder_api">TriggerOrders</a>
- *  <a href="#order_status_api">OrderStatus</a>
- *  <a href="#cancel_order_api">CancelOrder</a>
- *  <a href="#cancelorderCO_api">CancelOrderCO</a>
- *  <a href="#cancelorderBO_api">CancelOrderBO</a>
- *  <a href="#tradebook_api">TradeBook</a>
- *  <a href="#positions_api">Positions</a>
- *  <a href="#positionConversion_api">PositionConversion</a>
- *  <a href="#positionSquareOff_api">PositionSquareOff</a>
- *  <a href="#holdings_api">Holdings</a>
- *  <a href="#intraDayCandleData_api">IntraDayCandleData</a>
- *  <a href="#indexIntraDayCandleData_api">IndexIntraDayCandleData</a>
- *  <a href="#historicalCandleData_api">HistoricalCandleData</a>
- *  <a href="#indexHistoricalCandleData_api">IndexHistoricalCandleData</a>
- *  <a href="#logout_api">Logout</a>
+ *  <a href="#login">Login</a>
+ *  <a href="#equity_search">SearchEquityDerivative</a>
+ *  <a href="#quote">Quote</a>
+ *  <a href="#optionchain">OptionChain</a>
+ *  <a href="#limit">UserLimits</a>
+ *  <a href="#placeorder">PlaceOrder</a>
+ *  <a href="#placeorderBO">PlaceOrderBO</a>
+ *  <a href="#placeorderCO">PlaceOrderCO</a>
+ *  <a href="#modify_order">ModifyOrder</a>
+ *  <a href="#orderbook">OrderBook</a>
+ *  <a href="#triggerorder">TriggerOrders</a>
+ *  <a href="#order_status">OrderStatus</a>
+ *  <a href="#cancel_order">CancelOrder</a>
+ *  <a href="#cancelorderCO">CancelOrderCO</a>
+ *  <a href="#cancelorderBO">CancelOrderBO</a>
+ *  <a href="#tradebook">TradeBook</a>
+ *  <a href="#positions">Positions</a>
+ *  <a href="#positionConversion">PositionConversion</a>
+ *  <a href="#positionSquareOff">PositionSquareOff</a>
+ *  <a href="#holdings">Holdings</a>
+ *  <a href="#intraDayCandleData">IntraDayCandleData</a>
+ *  <a href="#indexIntraDayCandleData">IndexIntraDayCandleData</a>
+ *  <a href="#historicalCandleData">HistoricalCandleData</a>
+ *  <a href="#indexHistoricalCandleData">IndexHistoricalCandleData</a>
+ *  <a href="#logout">Logout</a>
 
 
-### <h3 id="login_api">Login Api:</h3>
+### <h3 id="login">Login Api:</h3>
 
    Java Bridge allows user authentication using UserLoginApi. A valid StockNote Trading Account and subscription to StockNote API Services is a pre-requisite for successful authentication.
 
@@ -140,7 +140,7 @@
     
 #### Using the session token we can call other API’s through java SDK
 
-### <h3 id="equity_search_api">Search Equity & Derivative:</h3>
+### <h3 id="equity_search">Search Equity & Derivative:</h3>
 
    This API is used to search equity, derivatives and commodity scrips based on user provided search symbol and exchange name.
 
@@ -182,7 +182,7 @@
      } ]
     }
 
-###  <h3 id="quote_api">Quote:</h3>
+###  <h3 id="quote">Quote:</h3>
 
    Get market depth details for a specific equity scrip including but not limited to values like last trade price, previous close price, change value, change percentage, bids/asks, upper and lower circuit limits etc. This helps user with market picture of an equity scrip using which he will be able to place an order.
 
@@ -255,7 +255,7 @@
       "listingId": "3045_NSE"
       }
 
-### <h3 id="optionchain_api">OptionChain:</h3>
+### <h3 id="optionchain">OptionChain:</h3>
 
     To search OptionChain for equity, derivatives and commodity scrips based on user provided search symbol and exchange name. 
       
@@ -292,7 +292,7 @@
       } ]
     }
 
-###  <h3 id="limit_api">UserLimits:</h3>
+###  <h3 id="limit">UserLimits:</h3>
 
    Gets the user cash balances, available margin for trading in equity and commodity segments.
       
@@ -326,7 +326,7 @@
       }
     }
 
-### <h3 id="placeorder_api">PlaceOrder:</h3>
+### <h3 id="placeorder">PlaceOrder:</h3>
 
    To place an equity/derivative order to the exchange i.e the place order request typically registers the order with OMS and when it happens successfully, a success response is returned. Successful placement of an order via the API does not imply its successful execution. To be precise, under normal scenarios, the whole flow of order execution starting with order placement, routing to OMS and transfer to the exchange, order execution, and confirmation from exchange happen real time. But due to various reasons like market hours, exchange related checks etc. This may not happen instantly. So when an order is successfully placed the PlaceOrder API returns an OrderNumber in response, and in scenarios as above the actual order status can be checked separately using the OrderStatus API call .This is for Placing CNC, MIS and NRML Orders.
     
@@ -380,7 +380,7 @@
       }
     }
 
-### <h3 id="placeorderBO_api">PlaceOrderBO:</h3>
+### <h3 id="placeorderBO">PlaceOrderBO:</h3>
 
    To place an equity/derivative order to the exchange i.e the place order BO request typically registers the order with OMS and when it happens successfully, a success response is returned. Successful placement of an order via the API does not imply its successful execution. To be precise, under normal scenarios, the whole flow of order execution starting with order placement, routing to OMS and transfer to the exchange, order execution, and confirmation from exchange happen real time. But due to various reasons like market hours, exchange related checks etc. This may not happen instantly. So when an order is successfully placed the placeOrderBO returns an orderNumber in response, and in scenarios as above the actual order status can be checked separately using the orderStatus API call. This is for Placing BO Orders.
         
@@ -438,7 +438,7 @@
       }
     }
 
-### <h3 id="placeorderCO_api">PlaceOrderCO:</h3>
+### <h3 id="placeorderCO">PlaceOrderCO:</h3>
 
    To place an equity/derivative order to the exchange i.e the place order CO request typically registers the order with OMS and when it happens successfully, a success response is returned. Successful placement of an order via the API does not imply its successful execution. To be precise, under normal scenarios, the whole flow of order execution starting with order placement, routing to OMS and transfer to the exchange, order execution, and confirmation from exchange happen real time. But due to various reasons like market hours, exchange related checks etc. This may not happen instantly. So when an order is successfully placed the placeOrderCO returns an orderNumber in response, and in scenarios as above the actual order status can be checked separately using the orderStatus API call. This is for Placing CO Orders.
         
@@ -491,7 +491,7 @@
       }
     }
 
-###  <h3 id="modify_order_api">Modify Order:</h3>
+###  <h3 id="modify_order">Modify Order:</h3>
 
    User would be able to modify some attributes of an order as long as it is with open/pending status in system. For modification order identifier is mandatory. With order identifier you need to send the optional parameter(s) which needs to be modified. In case the optional parameters aren't sent, the default will be considered from the original order. Modifiable attributes include quantity, Order Type (L,MKT, SL,SL-M). This API cannot be used for modifying attributes of an executed/rejected/cancelled order. Only the attribute that needs to be modified should be sent in the request alongwith the Order Identifier.
 
@@ -537,7 +537,7 @@
        }
     }
 
-### <h3 id="orderbook_api_autoscroll">OrderBook:</h3>
+### <h3 id="orderbook">OrderBook:</h3>
 
    Orderbook retrieves and displays details of all orders placed by the user on a specific day. This API returns all states of the orders, namely, open, pending, rejected and executed ones.
        
@@ -591,7 +591,7 @@
        } ]
     }
 
-### <h3 id="triggerorder_api_autoscroll">TriggerOrders:</h3>
+### <h3 id="triggerorder">TriggerOrders:</h3>
 
    To get the trigger order numbers in case of BO and CO orders so that their attribute values can be modified for BO orders, it will give the order identifiers. For Stop loss leg and target leg. Similarly for CO orders, it will return order identifier of stop loss leg only. Using the order identifier, the user would be able to modify the order attributes using the modifyOrder API. Refer modifyOrder API documentation for the parameters details. 
         
@@ -626,7 +626,7 @@
       } ]
     }
 
-###  <h3 id="order_status_api_autoscroll">Order Status:</h3>
+###  <h3 id="order_status">Order Status:</h3>
 
    Get status of an order placed previously. This API returns all states of the orders,but not limited to open, pending, and partially filled ones.
      
@@ -667,7 +667,7 @@
       }
     }
 
-###  <h3 id="cancel_order_api_autoscroll">Cancel Order:</h3>
+###  <h3 id="cancel_order">Cancel Order:</h3>
 
    An order which is open or pending in system can be cancelled. In other words, cancellation cannot be initiated for already Executed, Rejected orders.This is for CNC, MIS and NRML Orders.
       
@@ -690,7 +690,7 @@
       "statusMessage" : "Order cancelled successfully"
     }
 
-### <h3 id="cancelorderCO_api_autoscroll">CancelOrderCO:</h3>
+### <h3 id="cancelorderCO">CancelOrderCO:</h3>
 
    For Cancellation/exit of CO orders pass main leg Order number. If main leg is in Open/Pending state that order will be cancelled. If the main leg is executed and the sublegs are created and in open/Trigger pending state, the order will be exited. If the main leg is executed and if Stop loss is hit, API will return error message "SubOrder is in Executed status. Cannot exit/cancel such orders.
   
@@ -713,7 +713,7 @@
       "statusMessage" : "Cover Order 200601000000129exited successfully"
     }
 
-### <h3 id="cancelorderBO_api_autoscroll">CancelOrderBO:</h3>
+### <h3 id="cancelorderBO">CancelOrderBO:</h3>
 
    For Cancellation/exit of BO orders pass main leg Order number. If main leg is in Open/Pending state that order will be cancelled. If the main leg is executed and the sublegs are created and in open/Trigger pending state, the order will be exited. If the main leg is executed and if either of Stop loss or target is hit, API will return error message "SubOrder is in Executed status. Cannot exit/cancel such orders.
         
@@ -736,7 +736,7 @@
       "statusMessage" : "Bracket Order exited successfully"
     }
 
-### <h3 id="tradebook_api_autoscroll">TradeBook:</h3>
+### <h3 id="tradebook">TradeBook:</h3>
 
    Details of all successfully executed orders placed by the user.
        
@@ -790,7 +790,7 @@
        } ]
     }
 
-### <h3 id="positions_api_autoscroll">Positions:</h3>
+### <h3 id="positions">Positions:</h3>
 
    Get position details of the user (The details of equity, derivative, commodity, currency borrowed or owned by the user).
         
@@ -838,7 +838,7 @@
       }]
     }
 
-### <h3 id="positionConversion_api_autoscroll">PositionConversion:</h3>
+### <h3 id="positionConversion">PositionConversion:</h3>
 
    Convert an existing position of a margin product to a different margin product type. All or a subset of an existing position quantity can be converted to a different product type.The available margin product types are MARGIN_INTRADAY_SQUAREOFF(MIS), CASHNCARRY(CNC), NORMAL(NRML).
        
@@ -869,7 +869,7 @@
       "statusMsg" : "Position Conversion from MIS to CNC successful"
     }
 
-### <h3 id="positionSquareOff_api_autoscroll">PositionSquareOff:</h3>
+### <h3 id="positionSquareOff">PositionSquareOff:</h3>
 
    The PositionsApi class helps the user to Square Off existing position. Mostly used in day trading, in which user buy or sell a particular quantity of a stock and later in the day reverse the transaction to earn a profit.
        
@@ -905,7 +905,7 @@
       ]
     }
 
-###  <h3 id="holdings_api_autoscroll">Holdings:</h3>
+###  <h3 id="holdings">Holdings:</h3>
 
    Get the details of the Stocks which client is holding. Here, you will be able to get the Client holdings which are bought under ‘CNC’ product type and are not sold yet.
        
@@ -963,7 +963,7 @@
       ]
     }
 
-###  <h3 id="intraDayCandleData_api_autoscroll">IntraDayCandleData:</h3>
+###  <h3 id="intraDayCandleData">IntraDayCandleData:</h3>
 
    Gets the Intraday candle data such as Open, high, low, close and volume within specific time period per min for a specific symbol.
       
@@ -1005,7 +1005,7 @@
       }]
     }
 
-### <h3 id="indexIntraDayCandleData_api_autoscroll">IndexIntraDayCandleData:</h3>
+### <h3 id="indexIntraDayCandleData">IndexIntraDayCandleData:</h3>
 
    Gets the Index intraday candle data such as Open, high, low, close and volume within specific time period per min for a specific index.
       
@@ -1049,7 +1049,7 @@
       } ]
     }
 
-### <h3 id="historicalCandleData_api_autoscroll">HistoricalCandleData:</h3>
+### <h3 id="historicalCandleData">HistoricalCandleData:</h3>
 
    Gets the historical candle data such as Open, high, low, close, last traded price and volume within specific dates for a specific symbol. From date is mandatory. End date is optional and defaults to Today.
        
@@ -1094,7 +1094,7 @@
       }]
     }
 
-### <h3 id="indexHistoricalCandleData_api_autoscroll">IndexHistoricalCandleData:</h3>
+### <h3 id="indexHistoricalCandleData">IndexHistoricalCandleData:</h3>
 
    Gets the Index historical candle data such as Open, high, low, close, last traded price and volume within specific dates for a specific index. From date is mandatory. End date is optional and defaults to Today.
         
@@ -1141,7 +1141,7 @@
       }]
     }
 
-### <h3 id="logout_api_autoscroll">Logout:</h3>
+### <h3 id="logout">Logout:</h3>
 
    Logging out user from the application
       
